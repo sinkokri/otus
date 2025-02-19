@@ -9,9 +9,13 @@ To run a container
 To push an image to docker hub
 ``docker push sinkokri1/otus-app-hw``
 
-`GET /hello/<name>` - returns "Hello, <name>" \n
-`GET /health` - returns {"status": "OK"} \n
+`GET /hello/<name>` - returns "Hello, <name>"
+
+`GET /health` - returns {"status": "OK"}
+
 
 To test
-`curl arch.homework/health` \n
-`curl arch.homework/hello/sinkokri` \n
+`curl arch.homework/health`
+
+`curl arch.homework/hello/sinkokri`
+
