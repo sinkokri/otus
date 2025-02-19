@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: arch-homework-ingress
+  labels:
+    app: my-otus-app
+
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: arch.homework
+      http:
+        paths:
+          - path: /health
+            pathType: Exact
+            backend:
+              service:
+                name: my-otus-svc
+                port:
+                  number: 80
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: my-otus-svc
+                port:
+                  number: 80
